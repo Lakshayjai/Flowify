@@ -5,7 +5,9 @@ const router = express.Router(); // Create a router instance
 
 // Step 1: Redirect user to Spotify login
 router.get("/spotify", (req, res) => {
-  const scope = "playlist-read-private playlist-read-collaborative";
+  const scope =
+  "playlist-read-private playlist-read-collaborative user-library-read";
+
 
   const authUrl =
     "https://accounts.spotify.com/authorize" +

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Transfer Result</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<h1>Transfer Complete 🎉</h1>
+
+<p><strong>Tracks Added:</strong> <%= added %></p>
+<p><strong>Tracks Skipped:</strong> <%= skipped %></p>
+
+<% if (skippedSongs.length > 0) { %>
+  <h2>Skipped Songs</h2>
+  <ul>
+    <% skippedSongs.forEach(song => { %>
+      <li><%= song.title %> — <%= song.artist %></li>
+    <% }) %>
+  </ul>
+<% } %>
+
+<br>
+<a href="/dashboard">
+  <button>Back to Dashboard</button>
+</a>
+
+</body>
+</html>
